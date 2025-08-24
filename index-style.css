@@ -99,7 +99,6 @@
 .service > .service-content div img {
   background-color: #fff;
   width: 5.5rem;
-
   padding: 1rem;
   border: none;
   border-radius: 0.5rem;
@@ -465,9 +464,7 @@
     font-size: 5rem;
   }
   
-  .service-content {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
   
   .membership-card-content {
     padding: 8rem 4rem;
@@ -489,43 +486,11 @@
   }
 }
 
-/* Tablets and Small Laptops */
-@media (min-width: 769px) and (max-width: 991px) {
-  .landing-page header nav {
-    padding: 1rem 2rem;
-  }
-  
-  .hero_content h1 {
-    font-size: 3.5rem;
-  }
-  
-  .service-content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  
-  .membership-card-content {
-    padding: 5rem 2.5rem;
-  }
-  
-  .membership-card-content h2 {
-    font-size: 2.8rem;
-  }
-  
-  .info-boxes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .review-boxes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 /* Mobile Devices */
 @media (max-width: 768px) {
   .landing-page header nav {
     padding: 1rem;
-    flex-wrap: wrap;
   }
   
   .landing-page header nav h1 {
@@ -544,52 +509,70 @@
     padding: 1rem;
   }
   
-  .hero_content h1 {
-    font-size: 2.5rem;
-    line-height: 1.3;
-    margin-bottom: 1rem;
-  }
+  .landing-page .hero .hero_content h1 {
+  font-size: 3rem;
+  text-align: center;
+  width: 125%;
+  font-weight: 600;
+}
+
+.landing-page .hero .hero_content P {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
   
-  .hero_content p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-  }
-  
-  .hero_content button {
-    padding: 0.75rem 1.25rem;
-    font-size: 1rem;
+  .landing-page .hero .hero_content button {
+    padding: 1rem 1.25rem;
+    font-size: 1.3rem;
   }
   
   .service {
-    padding: 4rem 1rem;
+    padding: 4rem 0rem;
+    margin: 0rem;
+    width: 100%;
   }
   
-  .service-content {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .service > .service-content {
+    width: 60%;
+      flex-wrap: wrap;
+
   }
   
-  .service-content > div {
+  .service > .service-content div {
     padding: 1.5rem;
     height: auto;
+    width: 120%;
   }
   
-  .service-content div h3 {
+  .service > .service-content div h3 {
     font-size: 1.5rem;
   }
   
   .service-content div p {
     font-size: 1rem;
   }
-  
+  .service > .service-content div img {
+  background-color: #fff;
+  width: 7rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+
+
+}
   .membership-card {
     width: 95%;
     margin: 2rem auto;
+    background-image: url(./assets/middle-section-bg-img-mb-ver.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  
   }
   
-  .membership-card-content {
+  .membership-card .membership-card-content {
     padding: 3rem 2rem;
-    width: 100%;
+    width: 80%;
   }
   
   .membership-card-content h2 {
@@ -609,34 +592,17 @@
     padding: 2rem 0;
   }
   
-  .info-boxes {
-    grid-template-columns: 1fr;
-    gap: 0;
-    margin: 2rem 0;
-  }
   
-  .box {
-    height: auto;
-    padding: 1.5rem;
-    border-radius: 0 !important;
-  }
-  
-  .box:first-child {
-    border-radius: 1rem 1rem 0 0 !important;
-  }
-  
-  .box:last-child {
-    border-radius: 0 0 1rem 1rem !important;
-  }
-  
-  .box h2 {
-    font-size: 1.3rem;
-  }
-  
-  .box p {
-    font-size: 0.9rem;
-  }
-  
+  .imp-info .info-boxes {
+  display: flex;
+  flex-direction: column;
+}
+  .imp-info .info-boxes .box1 {
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+.imp-info .info-boxes .box4 {
+  border-radius: 0rem 0rem 1rem 1rem;
+}
   .review-section {
     padding: 4rem 1rem;
   }
@@ -766,6 +732,10 @@
     padding: 3rem 0.5rem;
   }
   
+  .service-content{
+    flex-direction: column;
+
+  }
   .service-content > div {
     padding: 1rem;
   }
