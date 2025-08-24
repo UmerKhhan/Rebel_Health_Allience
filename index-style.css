@@ -528,7 +528,7 @@
   }
   
   .service {
-    padding: 4rem 0rem;
+    padding: 4rem rem;
     margin: 0rem;
     width: 100%;
   }
@@ -732,8 +732,8 @@
     padding: 3rem 0.5rem;
   }
   
-  .service-content{
-    flex-direction: column;
+  .service .service-content{
+    width: 50%;
 
   }
   .service-content > div {
