@@ -2,7 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "arial", sans-serif;
+  font-family: "ariel", sans-serif;
+}
+* {
+  outline: 1px solid red; /* just for debugging */
+}
+
+body{
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 .landing-page {
@@ -86,6 +94,9 @@
   margin: 0rem 8rem;
   gap: 2rem;
 }
+.service > .service-content > hr{
+  display: none;
+}
 .service > .service-content div {
   padding: 1.5rem;
   background-color: #d4e4f3;
@@ -133,6 +144,7 @@
   margin: auto;
   border: none;
   width: 80%;
+  
 }
 .membership-card .membership-card-content {
   width: 50%;
@@ -161,6 +173,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap:3rem;
 }
 .imp-info > h2 {
   margin: 0rem 4rem;
@@ -187,15 +200,18 @@
 .imp-info .info-boxes .box2,
 .imp-info .info-boxes .box4 {
   background-image: url(./assets/imp-info-bg.png);
+  background-size: cover;
   height: 12rem;
   padding: 1rem;
   width: 20%;
   color: #fff;
+
 }
 .imp-info .info-boxes .box {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
   width: 18rem;
   height: 15rem;
 }
@@ -457,6 +473,9 @@
   gap: 1rem;
   margin: 0rem 2rem ;
 }
+.footer .footer-foot-mb{
+  display: none;
+}
 
 
 @media (min-width: 1200px) {
@@ -475,16 +494,6 @@
   }
 }
 
-/* Standard Desktop */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .hero_content h1 {
-    font-size: 4.5rem;
-  }
-  
-  .membership-card-content h2 {
-    font-size: 3.5rem;
-  }
-}
 
 
 /* Mobile Devices */
@@ -528,21 +537,30 @@
   }
   
   .service {
-    padding: 4rem rem;
+    padding: 2rem;
     margin: 0rem;
     width: 100%;
+    background-color: #d4e4f3;
   }
   
   .service > .service-content {
-    width: 60%;
-      flex-wrap: wrap;
+    width: 100%;
+    flex-wrap: wrap;
 
+  }
+  .service > .service-content > hr{
+    display: block ;
+    border: #333 2px solid;
+    width: 80%;
   }
   
   .service > .service-content div {
     padding: 1.5rem;
     height: auto;
     width: 120%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
   }
   
   .service > .service-content div h3 {
@@ -551,58 +569,84 @@
   
   .service-content div p {
     font-size: 1rem;
+    text-align: center;
   }
   .service > .service-content div img {
-  background-color: #fff;
-  width: 7rem;
-  padding: 1rem;
-  border: none;
-  border-radius: 0.5rem;
+    background-color: #fff;
+    width: 5rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
 
 
 }
   .membership-card {
-    width: 95%;
-    margin: 2rem auto;
+    width: 100%;
+   
     background-image: url(./assets/middle-section-bg-img-mb-ver.png);
     background-repeat: no-repeat;
     background-size: cover;
-  
+    border-radius: 0rem;
   }
   
   .membership-card .membership-card-content {
     padding: 3rem 2rem;
-    width: 80%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-top:20rem ;
   }
   
-  .membership-card-content h2 {
+  .membership-card .membership-card-content h2 {
     font-size: 2rem;
   }
   
-  .membership-card-content p {
-    font-size: 1.1rem;
+  .membership-card .membership-card-content p {
+    font-size: 1.5rem;
   }
   
   .imp-info {
-    padding: 4rem 1rem;
+    padding:0rem;
+    margin: 0;
   }
   
   .imp-info > h2 {
-    font-size: 2rem;
-    padding: 2rem 0;
+    font-size: 1.2rem;
+    padding: 3rem 0;
+    width: 90%;
   }
-  
-  
   .imp-info .info-boxes {
+    margin: 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  border-radius:0rem;
 }
-  .imp-info .info-boxes .box1 {
-  border-radius: 1rem 1rem 0rem 0rem;
-}
+  .imp-info .info-boxes .box{
+    width: 100%;
+      align-items: center ;
+      text-align: center;
+      gap: 1.5rem;
+      height: auto;
+  }
+  
+  .imp-info .info-boxes .box div {
+    width: 60%;
+
+  }
+  .imp-info .info-boxes .box2,
 .imp-info .info-boxes .box4 {
-  border-radius: 0rem 0rem 1rem 1rem;
+  background-image: url(./assets/imp-info-bg-1.png);
+  background-size: cover;}
+
+  .imp-info .info-boxes .box1,
+  .imp-info .info-boxes .box4 {
+  border-radius:0rem;
 }
+.imp-info a button {
+ 
+}
+
   .review-section {
     padding: 4rem 1rem;
   }
@@ -652,64 +696,61 @@
   .review-foot p {
     font-size: 1rem;
   }
-  
+  .footer .footer-foot {
+    display: none;
+  }
   .footer {
     padding: 3rem 1rem 2rem;
   }
-  
   .footer h1 {
     font-size: 2rem;
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
   }
-  
   .footer h1 img {
     width: 40px;
     height: 40px;
   }
-  
-  .footer-box1 {
+  .footer .footer-box1 {
     margin: 0 auto 2rem;
+    width: 90%;
   }
-  
-  .footer-box1 p {
-    font-size: 1rem;
+  .footer .footer-box1 p {
+    font-size: 0.6rem;
   }
-  
-  .footer-foot {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 1.5rem;
-  }
-  
-  .footer-foot .box1 {
-    margin: 0;
-  }
-  
-  .footer-foot .box1 h6 {
-    font-size: 0.9rem;
-  }
-  
-  .footer-foot .box2 {
+  .footer .footer-foot-mb{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100vw;
   }
-  
-  .footer-foot .box2 h6 {
-    font-size: 0.9rem;
+  .footer-foot-mb .box1 {
+    text-align: left;
+    padding: 1rem;
+    
   }
-  
-  .footer-foot .box3 {
-    margin: 0;
+  .footer-foot-mb .box1 h6 {
+    font-size: 0.6rem;
+    padding: 0.2rem;
   }
-  
-  .footer-foot .box3 i {
-    font-size: 1.3rem;
+  .footer-foot-mb .box2 {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .footer-foot-mb .box2 i {
+    font-size: 1.2rem;
+    padding: 0.2rem;
   }
 }
 
 /* Small Mobile Devices */
 @media (max-width: 480px) {
+  
+
   .landing-page header nav h1 {
     font-size: 1rem;
   }
@@ -728,20 +769,16 @@
     font-size: 0.9rem;
   }
   
-  .service {
-    padding: 3rem 0.5rem;
-  }
-  
-  .service .service-content{
-    width: 50%;
 
-  }
+  
+  
   .service-content > div {
     padding: 1rem;
   }
   
   .service-content div h3 {
     font-size: 1.3rem;
+    text-align: center;
   }
   
   .service-content div p {
@@ -760,10 +797,7 @@
     font-size: 1rem;
   }
   
-  .imp-info > h2 {
-    font-size: 1.8rem;
-    padding: 1.5rem 0;
-  }
+
   
   .box {
     padding: 1rem;
