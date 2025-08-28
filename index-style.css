@@ -821,7 +821,10 @@ body{
 
 /* Small Mobile Devices */
 @media (max-width: 480px) {
-  
+    body{
+      overflow-x: hidden;
+    }
+
 
   .landing-page header nav h1 {
     font-size: 1rem;
