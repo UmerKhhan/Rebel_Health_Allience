@@ -1,29 +1,18 @@
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  loop: true,
-  
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable:true,
-  },
+const mobile_nav_btn = document.querySelector('.mobile-nav-btn');
+const btn = document.querySelector(".landing-page header nav a button");
+const close_btn = document.querySelector('.fa-xmark');
+mobile_nav_btn.addEventListener("click",()=>{
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+btn.style.display='inline';
 
- breakpoints:{
-    300:{
-            slidesPerView:1,
-    },
-    768:{
-        slidesPerView:1,
-    },
-    1024:{
-        slidesPerView:1,
-    },
- }
+
 
 });
+close_btn.addEventListener('click',()=>{
+  btn.style.transform="translate(3rem)";
+  setTimeout(() => {
+    btn.style.display='none';
+  }, 500);
+})
+
+

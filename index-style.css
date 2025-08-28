@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "ariel", sans-serif;
+  transition: all 300ms;
 }
 * {
   /* outline: 1px solid red; just for debugging */
@@ -15,6 +16,9 @@ body{
   overflow-x: hidden;
   width: 100vw;
 }
+  .landing-page header nav .mobile-nav-btn{
+    display: none;
+  }
 
 .landing-page {
   background-image: url(./assets/Landing-section-bg-img2.jpg);
@@ -822,10 +826,39 @@ body{
   .landing-page header nav h1 {
     font-size: 1rem;
   }
+  .landing-page header nav a button{
+    display: none;
+    position: absolute;
+    top: 4rem;
+    right:0;
+    padding-top: 3rem;
+    transition: opacity 500ms ease;
+    animation: fade_in 300ms alternate;
+    box-shadow: 0 0 10rem 1rem;
+  }
+  .fa-xmark{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .landing-page header nav .mobile-nav-btn{
+    font-size: 1.5rem;
+    display: inline;
+    color: #000;
+    padding: 0.2rem 0.8rem;
+    border: none;
+    border-radius: 0.3rem;
+  }
+  .landing-page .hero .hero_content{
+      margin-top: 18rem;
+      padding: 1rem;
+    }
   
-  .hero_content h1 {
+  .landing-page .hero .hero_content h1 {
     font-size: 2rem;
-    line-height: 1.2;
+    width: 100%;
+ 
   }
   
   .hero_content p {
@@ -864,7 +897,28 @@ body{
   .membership-card-content p {
     font-size: 1rem;
   }
-  
+  .imp-info .info-boxes .box1,
+  .imp-info .info-boxes .box2,
+  .imp-info .info-boxes .box3,
+  .imp-info .info-boxes .box4 {
+  border-radius:0rem;
+}
+ .imp-info .info-boxes .box1{
+    order: 1;
+
+    }
+  .imp-info .info-boxes .box2{
+    order: 2;
+
+  }
+  .imp-info .info-boxes .box3{
+    order: 3;
+    
+  }
+  .imp-info .info-boxes .box4{
+    order: 4;
+   
+  }
 
   
   .box {
@@ -892,11 +946,11 @@ body{
     font-size: 0.9rem;
   }
   
-  .box-1, .box-2 {
+  .box-1, .box-2, .box-3 {
     padding: 1rem;
   }
   
-  .box-1 p, .box-2 p {
+  .box-1 p, .box-2 p.box-3 p {
     font-size: 0.9rem;
   }
   
@@ -958,5 +1012,15 @@ body{
   
   .footer h1 {
     font-size: 1.6rem;
+  }
+}
+@keyframes fade_in {
+  from{
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0rem);
   }
 }
