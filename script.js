@@ -13,7 +13,7 @@ close_btn.addEventListener('click',()=>{
   btn.style.transform="translate(3rem)";
   setTimeout(() => {
     btn.style.display='none';
-  }, 500);
+  }, 100);
 })
 
 
