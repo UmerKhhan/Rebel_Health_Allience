@@ -5,7 +5,10 @@
   font-family: "ariel", sans-serif;
 }
 * {
-  outline: 1px solid red; /* just for debugging */
+  /* outline: 1px solid red; just for debugging */
+}
+button{
+  font-size: 5rem;
 }
 
 body{
@@ -182,12 +185,11 @@ body{
   text-align: center;
 }
 .imp-info .info-boxes {
-  display: flex;
   flex-direction: row;
+  display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 50rem;
   margin: 3rem 3rem;
 }
 .imp-info .info-boxes .box1,
@@ -304,7 +306,7 @@ body{
   gap: 30px;
   margin-bottom: 40px;
   justify-content: center;
-  flex-wrap: wrap;
+  list-style: none;
 }
 
 .box-1,
@@ -328,6 +330,7 @@ body{
 
 .box-1 p,
 .box-2 p {
+  
   font-size: 1.5rem;
   line-height: 1.6;
   color: #333;
@@ -345,19 +348,14 @@ body{
   bottom: 1rem;
 }
 
-.review-controls {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 80px;
-}
+
 
 .control-left,
 .control-right {
   width: 50px;
   height: 50px;
-  background-color: #333;
-  color: white;
+
+
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -367,10 +365,6 @@ body{
   transition: background-color 0.3s ease;
 }
 
-.control-left:hover,
-.control-right:hover {
-  background-color: #555;
-}
 
 .review-foot {
   background-color: #d4e6f1;
@@ -493,7 +487,59 @@ body{
     font-size: 4rem;
   }
 }
-
+/* tablets and ipads */
+@media (max-width:1024px) {
+  .landing-page header nav a button,
+  .landing-page .hero .hero_content button,
+  .service a button,
+  .membership-card .membership-card-content a button,
+  .imp-info a button,
+  .review-heading button,
+  .review-foot button {
+    font-size: 1.2rem ;
+  }
+  .service .service-content{
+    gap:none;
+    flex-wrap: wrap;
+    margin:0;
+  }
+  .service > .service-content div {
+    width: 45vw;
+    height: 28vh;
+  }
+  .membership-card {
+    background-image: url(./assets/middle-section-bg-img-mb-ver.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .membership-card .membership-card-content {
+    padding: 3rem 2rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-top:20rem ;
+  }
+  .imp-info .info-boxes {
+  flex-wrap: wrap;
+  width: 57vw;
+  }
+  .imp-info .info-boxes .box1{
+    order: 1;
+    border-radius: 2rem 0rem 0rem 0rem;
+    }
+  .imp-info .info-boxes .box2{
+    order: 2;
+    border-radius: 0rem 2rem 0rem 0rem;
+  }
+  .imp-info .info-boxes .box3{
+    order: 4;
+    border-radius: 0rem 0rem 2rem 0rem;
+  }
+  .imp-info .info-boxes .box4{
+    order: 3;
+    border-radius: 0rem 0rem 0rem 2rem;
+  }
+}
 
 
 /* Mobile Devices */
@@ -643,9 +689,7 @@ body{
   .imp-info .info-boxes .box4 {
   border-radius:0rem;
 }
-.imp-info a button {
- 
-}
+
 
   .review-section {
     padding: 4rem 1rem;
@@ -682,6 +726,9 @@ body{
   
   .review-controls {
     margin-bottom: 3rem;
+  }
+  .control-left{
+    position: absolute;
   }
   
   .review-foot {

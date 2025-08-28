@@ -10,6 +10,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="index-style.css" />
     <title>Rebel Health Alliance</title>
   </head>
@@ -137,7 +141,7 @@
           <img src="./assets/arrow.png" alt="" /></button
       ></a>
     </section>
-    <section class="review-section">
+    <section class="review-section swiper">
       <div class="review-heading">
         <h1>Members Get Results Others Only Dream About</h1>
         <a href="#"
@@ -146,16 +150,17 @@
             <img src="./assets/arrow.png" alt="" /></button
         ></a>
       </div>
-      <div class="review-boxes">
-        <div class="box-1">
+      
+      <ul class="review-boxes swiper-wrapper">
+        <li class="box-1 swiper-slide">
           <p>
             You can go to your family doctor who left med school years ago who
             prescribes you the standard BS or you can get a team of experts who
             custom tailor their advice to best optimize you.
           </p>
           <h4>David L.</h4>
-        </div>
-        <div class="box-2">
+        </li>
+        <li class="box-2 swiper-slide">
           <p>
             Just wanted to give you a shout and say your alliance and team have
             been absolutely amazing and it's shown in my health and knowledge
@@ -164,12 +169,31 @@
             Thanks again man.
           </p>
           <h4>John P.</h4>
-        </div>
-      </div>
-      <div class="review-controls">
-        <div class="control-left"><</div>
-        <div class="control-right">></div>
-      </div>
+        </li>
+        <li class="box-1 swiper-slide">
+          <p>
+            You can go to your family doctor who left med school years ago who
+            prescribes you the standard BS or you can get a team of experts who
+            custom tailor their advice to best optimize you.
+          </p>
+          <h4>David L.</h4>
+        </li>
+        <li class="box-2 swiper-slide">
+          <p>
+            Just wanted to give you a shout and say your alliance and team have
+            been absolutely amazing and it's shown in my health and knowledge
+            and fitness. Keep up the good work, I know it's not easy... and let
+            me know if you ever branch out from primary care to emergency care.
+            Thanks again man.
+          </p>
+          <h4>John P.</h4>
+        </li>
+      </ul>
+      
+        <div class="control-left swiper-button-prev"></div>
+        <div class="control-right swiper-button-next"></div>
+        
+      
       <div class="review-foot">
         <h1>This Is Your Second Chance to Do Healthcare Differently</h1>
         <p>Let's make it personal—and powerful.</p>
@@ -222,5 +246,7 @@
         </div>
       </footer>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
