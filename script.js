@@ -4,8 +4,8 @@ const close_btn = document.querySelector('.fa-xmark');
 mobile_nav_btn.addEventListener("click",()=>{
 
 btn.style.display='inline';
-btn.style.transform="translate(-3rem)";
 
+btn.style.transform="translate(0rem)";
 
 
 });
